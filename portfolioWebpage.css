@@ -1,0 +1,162 @@
+:root {
+  --nav-button-font: white;
+  --nav-button-background: #616161;
+  --hovered-background: lightgray;
+  --hovered-font: black;
+  --header-background: #6a5acd;
+  --header-font: #e9ecf0;
+  --shadow-color: black;
+  --footer-background: black;
+  --footer-font: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+
+#navbar {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 999;
+}
+
+#navbar, #welcome-section, #welcome-section, #projects img, #projects p, #profile-link {
+  box-shadow: 0px 3px 5px var(--shadow-color);
+}
+
+#navbar, #projects p, .profile-more-button, #profile-link {
+  background-color: var(--nav-button-background);
+  
+}
+
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li {
+  list-style: none;
+}
+
+#navbar a {
+  display: block;
+  padding: 15px 25px;
+}
+
+#navbar a, #projects a, #profile-link, .email{
+  text-decoration: none;
+  color: var(--nav-button-font);
+}
+
+#navbar a:hover, #projects p:hover, #profile-link:hover, #projects p:hover a {
+  background-color: var(--hovered-background);
+  color: var(--hovered-font);
+}
+
+#projects p:hover a, #profile-link:hover {
+  color: var(--hovered-font);
+}
+
+#projects div:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+
+#welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--header-background);
+  color: var(--header-font);
+}
+
+
+#welcome-section, .projects-header, #projects p, #profile-link, footer {
+  text-align: center;
+}
+
+.projects-header {
+  padding: 70px 0;
+}
+
+#projects {
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  min-height: 800px;
+  margin: auto;
+}
+
+#projects div {
+  width: 50%;
+  height: 50%;
+  padding: 30px 0;
+}
+
+#projects img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+#projects img, #projects p {
+  display: block;
+  margin: auto;
+}
+
+#projects p, #profile-link{
+  padding: 15px 0;
+  width: 90%;
+}
+
+#profile-link {
+  display: block;
+  margin: 75px auto;
+  width: 300px;
+}
+
+footer {
+  background-color: var(--footer-background);
+  color: var(--footer-font);
+  padding: 50px 0;
+}
+
+.email {
+  padding-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    min-width: 300px;
+  }
+
+  #navbar ul {
+  display: flex;
+  flex-direction: column;
+  }
+
+  #navbar a {
+    width: 100%;
+    text-align: center;
+  }
+
+  #welcome-section {
+    margin-top: 148px;
+  }
+
+  #projects {
+  display: flex;
+  flex-flow: column nowrap;
+  }
+
+  #projects div {
+  width: 100%;
+  }
+}
